@@ -5,22 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="matrix.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 id="A1">LDU FACTORIZATION</h1>
     <label for="order"></label>
-    <input type="text" id="order">
-    <button onclick="order1()">order</button>
+    <input type="number" id="order">
+    <button class="A2" onclick="order1()">order</button>
     <br>
-    <button onclick="matrix1('showw')">matrix</button>
+    <button class="A2" onclick="matrix1('showw')">matrix</button>
     <div id="showw">
+    </div>
+    <div>
+        <h2>Upper Triangular Matrix</h2>
+        <div>
+            <button class="A2" onclick="umatrix('upper')">Click here to Start calculation for U</button>
+        </div>
+        <div id="upper">
+
+        </div>
+    </div>
     <div>
         <h2>Lower Triangular Matrix</h2>
         <div>
-            <button onclick="Lmatrix('lower')">Click here to Start calculation for L</button>
+            <button class="A2" onclick="Lmatrix('lower')">Click here to Start calculation for L</button>
         </div>
         <div id="lower">
 
         </div>
     </div>
+    <div>
+        <h2>Digonal Matrix</h2>
+        <div>
+            <button class="A2" onclick="Dmatrix('digonal')">Click here to Start calculation for D</button>
+        </div>
+        <div id="digonal">
+
+        </div>
+    </div>
+    <div>
+        <h2>U_Desh matrix</h2>
+        <div>
+            <button class="A2" onclick="U_deshmatrix('udesh')">Click here to Start calculation for U desh</button>
+        </div>
+        <div id="udesh">
+
+        </div>
+    </div>
+    <div>
+        <h2>LDU matrix</h2>
+        <div>
+            <button class="A2" onclick="LDUmatrix('ldu')">Click here to Start calculation for LDU</button>
+        </div>
+        <div id="ldu">
+
+        </div>
+    </div>
+    
 </body>
 </html>
