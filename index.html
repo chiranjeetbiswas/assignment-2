@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="matrix.js"></script>
 </head>
 <body>
-    <h1>LDU Decomposition</h1>
+    <label for="order"></label>
+    <input type="text" id="order">
+    <button onclick="order1()">order</button>
+    <br>
+    <button onclick="matrix1('showw')">matrix</button>
+    <div id="showw">
+    <div>
+        <h2>Lower Triangular Matrix</h2>
+        <div>
+            <button onclick="Lmatrix('lower')">Click here to Start calculation for L</button>
+        </div>
+        <div id="lower">
+
+        </div>
+    </div>
 </body>
 </html>

@@ -92,3 +92,44 @@ function umatrix(id) {
     document.getElementById(id).innerHTML += `<h3>U Matrix</h3>${show(id,U)}` + '<br>';               
     document.getElementById(id).innerHTML += `<h3>Product of Elimination Matrices</h3>${show(id,multi_E)}` + '<br>';                   
 }
+function Lmatrix(id) {
+    L = identity();
+    
+    for (let i = 0; i < order; i++) {
+        for (let j = i; j < order; j++) {
+            if (i === j) {
+                let v = multi_E[i][j];
+                document.getElementById(id).innerHTML += `Elimination matrix: E${j+1}${i+1}, R${j+1} = R${j+1} + xR${i+1}` + '<br>' + `x = -(R${j+1}/R${i+1}) => x = -(a${j+1}${i+1}/a${i+1}${i+1})` + '<br>';
+                document.getElementById(id).innerHTML += `${show (id,multi_E)}` + '<br>';            
+                for (let k = 0; k < order; k++) {
+                    multi_E[i][k] =multi_E[i][k] / v; 
+                    L[i][k] = L[i][k] / v;
+                }
+                document.getElementById(id).innerHTML += show(id, L)+`<br>`; 
+            } else {
+                let v =multi_E[j][i];
+                document.getElementById(id).innerHTML += `Elimination matrix: E${j+1}${i+1}, R${j+1} = R${j+1} + xR${i+1}` + '<br>' + `x = -(R${j+1}/R${i+1}) => x = -(a${j+1}${i+1}/a${i+1}${i+1})` + '<br>';
+                document.getElementById(id).innerHTML += `${show (id,multi_E)}` + '<br>';            
+                for (let k = 0; k < order; k++) {
+                    multi_E[j][k] =multi_E[j][k] - v *multi_E[i][k]; 
+                    L[j][k] = L[j][k] - v * L[i][k];
+                }
+                document.getElementById(id).innerHTML += show(id, L)+`<br>`; 
+            }
+        }
+    }
+    
+    for (let i = order-1; i>-1; i--) {
+        for (let j = i-1; j >-1; j--) {
+            let v =multi_E[j][i];
+            document.getElementById(id).innerHTML += `Elimination matrix: E${j+1}${i+1}, R${j+1} = R${j+1} + xR${i+1}` + '<br>' + `x = -(R${j+1}/R${i+1}) => x = -(a${j+1}${i+1}/a${i+1}${i+1})` + '<br>';
+            document.getElementById(id).innerHTML += `${show (id,multi_E)}` + '<br>';            
+            for (let k = 0; k < order; k++) {
+               multi_E[j][k] =multi_E[j][k] - v *multi_E[i][k]; 
+                L[j][k] = L[j][k] - v *L[i][k];
+            }
+            document.getElementById(id).innerHTML += show(id, L)+`<br>`; 
+        }        
+    }
+
+}
