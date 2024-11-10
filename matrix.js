@@ -133,3 +133,36 @@ function Lmatrix(id) {
     }
 
 }
+function Dmatrix(id){
+    D=U.map(row => [...row]);
+    for (let i=0; i<order;i++){
+        for (let j=0;j<order;j++){
+            if (i!=j){
+                D[i][j]=0;
+            }
+        }
+        document.getElementById(id).innerHTML += show(id, D)+`<br>`;
+    }
+    
+}
+function U_deshmatrix(id) {
+    U_desh=U.map(row => [...row]);
+    for (let i=0; i<order;i++){
+        document.getElementById(id).innerHTML += `row ${i+1} divide by${U_desh[i][i]}` + `<br>`;
+        let v=U[i][i];
+        for (let j=0;j<order;j++){
+            U_desh[i][j]=U[i][j]/v;
+
+        }
+        document.getElementById(id).innerHTML += show(id, U_desh)+`<br>`;
+    }
+}
+function LDUmatrix(id){
+    let ld= multiply(L,D)
+    document.getElementById(id).innerHTML +=`Product of L and D <br>`+ show(id, ld)+`<br>`;
+    let ldu=multiply(ld,U_desh)
+    document.getElementById(id).innerHTML += `Product of LD and U_desh <br>`+ show(id, ldu);
+
+    
+}
+

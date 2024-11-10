@@ -1,18 +1,27 @@
-body{
-    background-image: url("https://w0.peakpx.com/wallpaper/506/235/HD-wallpaper-white-hexagon-geometric-shapes-white-aesthetic.jpg");
-    background-size:auto;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.A2{
-    border-radius:20px;
-    background-color: gold;
-    border-color: gold;
+body {
+    background-image: url("https://w0.peakpx.com/wallpaper/506/235/HD-wallpaper-white-hexagon-geometric-shapes-white-aesthetic.jpg");
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
 }
-#A1{
+
+h1 {
     text-align: center;
-    color:#bf42f5
+    color: rgb(57, 123, 238);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
-#order{
-    border-radius: 20px;
+
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
 }
