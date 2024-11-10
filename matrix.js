@@ -48,6 +48,7 @@ function multiply(mat1,mat2) {
         }
         pro.push(v)
 }
+}
 function elimination( num, r, c) {
     let Eli = [];
     Eli=identity();
@@ -90,7 +91,4 @@ function LDUmatrix(id){
     document.getElementById(id).innerHTML +=`Product of L and D <br>`+ show(id, ld)+`<br>`;
     let ldu=multiply(ld,U_desh)
     document.getElementById(id).innerHTML += `Product of LD and U_desh <br>`+ show(id, ldu);
-
-    
 }
-
