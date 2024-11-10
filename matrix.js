@@ -71,10 +71,10 @@ function elimination( num, r, c) {
     Eli[r][c]=num ;
     return Eli ;
 }
-let multi_E=identity();
+let multi_E;
 function umatrix(id) {
     U=a.map(row => [...row]);
-    I = identity();
+    multi_E = identity();
     for (let i = 0; i < order; i++) {
         let elemination_mat = [];
         for (let j = i+1; j < order; j++) {
@@ -92,6 +92,7 @@ function umatrix(id) {
     document.getElementById(id).innerHTML += `<h3>U Matrix</h3>${show(id,U)}` + '<br>';               
     document.getElementById(id).innerHTML += `<h3>Product of Elimination Matrices</h3>${show(id,multi_E)}` + '<br>';                   
 }
+
 function Lmatrix(id) {
     L = identity();
     
@@ -116,7 +117,7 @@ function Lmatrix(id) {
                 }
                 document.getElementById(id).innerHTML += show(id, L)+`<br>`; 
             }
-        }
+        }   
     }
     
     for (let i = order-1; i>-1; i--) {
@@ -165,4 +166,5 @@ function LDUmatrix(id){
 
     
 }
+
 
