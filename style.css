@@ -8,7 +8,7 @@ body {
     background-image: url("https://w0.peakpx.com/wallpaper/506/235/HD-wallpaper-white-hexagon-geometric-shapes-white-aesthetic.jpg");
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    color: #333;
+    color: #363434;
     padding: 20px;
 }
 
@@ -31,7 +31,7 @@ input[type="number"] {
     font-size: 1rem;
     margin-right: 15px;
     width: 150px;
-    border: 1px solid #ccc;
+    border: 1px solid #c1bebe;
     border-radius: 4px;
 }
 
@@ -65,25 +65,25 @@ div {
 }
 
 h2 {
-    color: #333;
+    color: #403e3e;
     font-size: 1.5rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #d3cfcf;
     padding-bottom: 5px;
 }
 
-#showw, #upper, #lower, #diagonal, #udesh, #ldu {
+#showw, #upper, #lower, #digonal, #udesh, #ldu {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+    border: 1px solid #eaebcd;
+    background-color: #f4e9e9;
     border-radius: 4px;
     font-family: "Courier New", Courier, monospace;
 }
 
 pre {
     font-size: 1rem;
-    color: #333;
+    color: #333232;
     white-space: pre-wrap;
     margin: 0;
 }
